@@ -111,3 +111,13 @@ button:hover {
     border-radius: 15px;
     display: inline-block;
 }
+
+/* Cute GIF in the bottom right corner */
+.cute-gif {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 120px; /* Adjust size as needed */
+    z-index: 5; /* Keep it visible but not blocking the game */
+    pointer-events: none; /* Prevents it from interfering with clicks */
+}
