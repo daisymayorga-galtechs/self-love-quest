@@ -1,0 +1,113 @@
+.borel-regular {
+    font-family: "Borel", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  
+body {
+    background-color: #ffe6f2; /* Light pink background */
+    font-family: "Poppins", serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.game-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10; /* Ensures it stays above floating hearts */
+}
+
+h1 {
+    font-family: "Borel", serif;
+    font-size: 26px;
+    color: #ff4d88;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Buttons - making them extra cute 💕 */
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 15px auto; /* Centering and spacing */
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.option-btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto; /* Adding spacing */
+}
+
+/* Hiding elements until needed */
+.hidden {
+    display: none;
+}
+
+/* Floating Hearts Animation */
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-600px); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    color: pink;
+    font-size: 22px;
+    animation: float 4s infinite ease-in-out;
+    z-index: -1; /* Places hearts behind the game container */
+}
+/* Questions */
+#question-text {
+    font-size: 20px;
+    color: #cc6699; /* Soft mauve pink */
+    font-weight: bold;
+}
+
+/* Results - Different Style */
+#result-message {
+    font-size: 22px;
+    color: #d63384; /* Bright, happy pink */
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* More modern feel */
+    background: #f8d7da; /* Light pastel background */
+    padding: 15px;
+    border-radius: 15px;
+    display: inline-block;
+}
