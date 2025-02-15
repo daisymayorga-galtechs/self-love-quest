@@ -41,6 +41,8 @@ const resultMessage = document.getElementById("result-message");
 const nextBtn = document.getElementById("next-btn");
 const finalMessageContainer = document.getElementById("final-message-container");
 const finalMessage = document.getElementById("final-message");
+const playAgainBtn = document.getElementById("play-again-btn");
+playAgainBtn.addEventListener("click", restartGame);
 
 startBtn.addEventListener("click", startGame);
 nextQuestionBtn.addEventListener("click", nextQuestion);
@@ -123,6 +125,10 @@ function showFinalMessage() {
     } else {
         finalMessage.innerHTML = "✨ Keep shining and spreading love, but don’t forget: the most important love story you’ll ever have is the one with yourself. 💕";
     }
+}
+function restartGame() {
+    finalMessageContainer.classList.add("hidden"); // Hide final message
+    startGame(); // Restart the game
 }
 
 function createHearts() {
