@@ -28,6 +28,7 @@ body {
 
 .game-container {
     max-width: 500px;
+    width: 90%; /* Adjusts size for smaller screens */
     margin: 50px auto;
     padding: 30px;
     background: white;
@@ -114,7 +115,9 @@ button:hover {
 
 /* Title image styling */
 .game-title {
-    width: 450px; /* Adjust size as needed */
+    width: 80%; /* Makes it scale with screen size */
+    max-width: 450px; /* Prevents it from getting too big */
+    height: auto; /* Keeps aspect ratio */
     display: block;
     margin: 0 auto 20px auto; /* Centers the image */
 }
@@ -141,4 +144,28 @@ button:hover {
 
 .pink {
     color: #ff69b4; /* Bright pink for positive progress */
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 600px) {
+    .game-container {
+        width: 95%; /* Uses more screen space on small devices */
+        padding: 20px; /* Slightly less padding for a snug fit */
+    }
+
+    .game-title {
+        width: 90%; /* Scales title image to fit */
+        max-width: 250px; /* Keeps it looking nice */
+    }
+
+    button {
+        font-size: 16px; /* Adjust button size for mobile */
+        padding: 10px 20px;
+    }
+
+    .cute-gif {
+        width: 100px; /* Makes the GIF smaller on mobile */
+        bottom: 5px; /* Adjusts position */
+        right: 5px;
+    }
 }
