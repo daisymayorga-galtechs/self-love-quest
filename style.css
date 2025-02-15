@@ -112,6 +112,13 @@ button:hover {
     display: inline-block;
 }
 
+/* Title image styling */
+.game-title {
+    width: 450px; /* Adjust size as needed */
+    display: block;
+    margin: 0 auto 20px auto; /* Centers the image */
+}
+
 /* Cute GIF in the bottom right corner */
 .cute-gif {
     position: fixed;
@@ -120,4 +127,18 @@ button:hover {
     width: 120px; /* Adjust size as needed */
     z-index: 5; /* Keep it visible but not blocking the game */
     pointer-events: none; /* Prevents it from interfering with clicks */
+}
+
+/* Score Colors */
+.score {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.red {
+    color: #d63384; /* Deep pinkish-red for low score */
+}
+
+.pink {
+    color: #ff69b4; /* Bright pink for positive progress */
 }

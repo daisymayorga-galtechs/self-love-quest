@@ -81,7 +81,14 @@ function showQuestion() {
 
 function selectOption(points, message) {
     score += points;
-    feedbackMessage.innerHTML = message + `<br><br> ⭐ Current Score: ${score}`;
+
+    // Change score color based on points
+    if (points === 0) {
+        feedbackMessage.innerHTML = message + `<br><br> <span class="score red">💔 Current Score: ${score}</span>`;
+    } else {
+        feedbackMessage.innerHTML = message + `<br><br> <span class="score pink">💕 Current Score: ${score}</span>`;
+    }
+
     feedbackContainer.classList.remove("hidden");
     nextQuestionBtn.classList.remove("hidden"); // Show next question button
 }
@@ -112,9 +119,9 @@ function showFinalMessage() {
     finalMessageContainer.classList.remove("hidden");
 
     if (score < 3) {
-        finalMessage.innerHTML = "🌍 The world is vast, full of mountains to climb and quests to conquer. But before you take on any adventure, you must first love the hero of your own story—you. 💖 <br><br> You are worthy of love, care, and kindness. Start by giving it to yourself.";
+        finalMessage.innerHTML = "🌍 The world is vast, full of mountains to climb and quests to conquer. But before you take on any adventure, you must first love the hero of your own story, you. 💖 <br><br> You are worthy of love, care, and kindness. Start by giving it to yourself.";
     } else {
-        finalMessage.innerHTML = "✨ Keep shining and spreading love, but don’t forget—the most important love story you’ll ever have is the one with yourself. 💕";
+        finalMessage.innerHTML = "✨ Keep shining and spreading love, but don’t forget: the most important love story you’ll ever have is the one with yourself. 💕";
     }
 }
 
