@@ -128,7 +128,12 @@ function showFinalMessage() {
 }
 function restartGame() {
     finalMessageContainer.classList.add("hidden"); // Hide final message
-    startGame(); // Restart the game
+    resultContainer.classList.add("hidden"); // Hide result message
+    feedbackContainer.classList.add("hidden"); // Hide any feedback messages
+    startBtn.style.display = "block"; // Show the Start button again
+    introText.style.display = "block"; // Show intro text again (if hidden)
+    score = 0; // Reset score
+    currentQuestionIndex = 0; // Reset question index
 }
 
 function createHearts() {
